@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>attendance table</title>
+    <link rel="stylesheet" href="./att.css">
+</head>
+
+<body>
+    <h1 class="heading">Attendance for 6/30/2022</h1>
+    <table id="tableElement" border="1px" cellspacing=0>
+        <!-- <tr>
+                <th>Num</th>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th colspan="3">Attendence</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>12345</td>
+                <td >John Doe</td>
+                <td><button class="a" onchange="updatepresent(idx)">&#x2705;</button></td>
+                <td><button class="b" onchange="updateabsent(idx)">&#x1F6AB;</button></td>
+                <td><button class="c" onchange="updatelate(idx)">&#x1F559;</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>12346</td>
+                <td>John Doe</td>
+                <td><button class="a" onchange="updatepresent(idx)">&#x2705;</button></td>
+                <td><button class="b" onchange="updateabsent(idx)">&#x1F6AB;</button></td>
+                <td><button class="c" onchange="updatelate(idx)">&#x1F559;</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>12347</td>
+                <td>John Doe</td>
+                <td><button class="a" onchange="updatepresent(idx)">&#x2705;</button></td>
+                <td><button class="b" onchange="updateabsent(idx)">&#x1F6AB;</button></td>
+                <td><button class="c" onchange="updatelate(idx)">&#x1F559;</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>12348</td>
+                <td>John Doe</td>
+                <td><button class="a" onchange="updatepresent(idx)">&#x2705;</button></td>
+                <td><button class="b" onchange="updateabsent(idx)">&#x1F6AB;</button></td>
+                <td><button class="c" onchange="updatelate(idx)">&#x1F559;</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>12349</td>
+                <td>John Doe</td>
+                <td><button class="a" onchange="updatepresent(idx)">&#x2705;</button></td>
+                <td><button class="b" onchange="updateabsent(idx)">&#x1F6AB;</button></td>
+                <td><button class="c" onchange="updatelate(idx)">&#x1F559;</button></td>
+            </tr>
+            <tr>
+                <td colspan="3">statistics</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr> -->
+    </table>
+        
+    <div class="extra">
+        <br>
+        <button id="add">Add Students</button>
+        <button id="rem">Remove Student</button>
+        <button id="download"> Save</button>
+        <button id="clear">Clear All</button>
+    </div>
+    <div class="yourchoose">
+            <p>Or choose your own students group <br> press(Choose file) to replace this students with yours </p>
+            <p><input type="file" id="csvFile" accept=".csv" /></p>
+    </div>
+    <div class="back1" id="back1">
+        <div class="pop1">
+            <h5>Remove student that has the number :</h5>
+            <p><input type="number" id="remnum" onkeydown="enter1(event)"></p>
+            <p>or press enter to remove</p>
+            <p>
+                <button id="remove">Remove</button>
+                <button id="cancelrem">Cancel</button>
+            </p>
+        </div>
+    </div>
+    <div class="back" id="back">
+        <div class="pop">
+            <h3>add new student</h3>
+            <h5 id="turn"></h5>
+            <label for="identity">student ID</label>
+            <input type="number" id="identity" onkeydown="enter(event)"> <br>
+            <label for="firstName"> first name</label>
+            <input type="text" id="firstName" onkeydown="enter(event)"> <br>
+            <label for="lastName">last name</label>
+            <input type="text" id="secondName" onkeydown="enter(event)"> <br>
+            <button id="create">save</button>
+            <button id="cancel">cancel</button>
+            <p>or press enter to save</p>
+        </div>
+    </div>
+    <script src="./att.js"></script>
+</body>
+
+</html>
+
+<!--I add students without reset sheet (which is preferable)-->
+<!--when you click in (add students button) prompt asks you to enter the students number and it adds each student as you press enter or click in save button-->
+<!--when click save it downloads excel sheet with .csv extention-->
